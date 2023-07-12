@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class DesafioOne {
+public class Primeiro {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -20,7 +20,6 @@ public class DesafioOne {
         } while (totalLinhas <= 0);
 
         for (int i = 0; i < totalLinhas; i++) {
-
             int numero;
             do {
                 System.out.println("Digite o valor de entrada para cada linha (Regra: O número deve ser inteiro e positivo): ");
