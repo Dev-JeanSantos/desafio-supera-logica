@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Terceiro {
-
-
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -28,17 +26,20 @@ public class Terceiro {
 
         Collections.sort(numeros, Collections.reverseOrder());
 
-        int pos = 0;
+        int contador = compararResultado(numeros, valorAlvo);
+
+        System.out.println("Array: " + numeros);
+        System.out.println("Quantidade de valores : " + contador);
+    }
+
+    private static int compararResultado(ArrayList<Integer> array, int alvo ){
         int count = 0;
-
-
-        for (int x : numeros) {
-            int dif = x - valorAlvo;
-            if (numeros.contains(dif)) {
+        for (int x : array) {
+            int resultadoSubtracao = x - alvo;
+            if (array.contains(resultadoSubtracao)) {
                 count++;
             }
         }
-        System.out.println("count: " + count);
-        System.out.println("Array: " + numeros);
+        return count;
     }
 }
