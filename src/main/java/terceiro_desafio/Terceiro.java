@@ -22,7 +22,7 @@ public class Terceiro {
         int numero;
 
         for (int i = 0; i < tamanhoArray; i++) {
-             numero = scan.nextInt();
+            numero = scan.nextInt();
             numeros.add(numero);
         }
 
@@ -31,12 +31,14 @@ public class Terceiro {
         int pos = 0;
         int count = 0;
 
-        for (int x: numeros ) {
-            if(numeros.get(pos) - numeros.get(pos + 1) == valorAlvo){
+
+        for (int x : numeros) {
+            int dif = x - valorAlvo;
+            if (numeros.contains(dif)) {
                 count++;
-                System.out.println("count: "+count);
             }
         }
-        System.out.println("Array: "+ numeros);
+        System.out.println("count: " + count);
+        System.out.println("Array: " + numeros);
     }
 }

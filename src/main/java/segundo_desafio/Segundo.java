@@ -15,7 +15,7 @@ public class Segundo {
         double valor = scn.nextDouble();
 
         int notas = (int) valor;
-        int moedas = (int)(valor - notas);
+        int moedas = (int)((valor - notas)* 100);
 
         int notas100 = notas / 100;
         notas -= notas100 * 100;
